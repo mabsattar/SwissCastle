@@ -7,12 +7,13 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 contract SwissCastle is ERC20 {
 
-    constructor() ERC20("Swisscastle Token", "SWC") {
-        _mint(msg.sender, 100);
+    constructor(string memory name, string memory symbol) ERC20(name, symbol) {
+        _mint(msg.sender, 100 * (10 ** 18));
 
 
     }
     
+     
 }
 
 
